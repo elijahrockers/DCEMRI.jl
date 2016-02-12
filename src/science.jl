@@ -16,7 +16,7 @@ end
 function r1eff{M,N}(S::Array{Float64,M}, R10::Array{Float64,N}, TR::Float64, flip::Float64)
   @dprint "converting DCE signal to effective R1"
   @assert 0.0 < flip "flip angle must be positive"
-  @assert 0.0 < TR && TR < 1.0 "TR must be in units of ms"
+  @assert 0.0 < TR && TR < 1.0 "TR must be in units of seconds"
   dims = size(S)
   nt = dims[1]
   n = prod(dims[2:end])
