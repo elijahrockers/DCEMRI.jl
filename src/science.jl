@@ -21,7 +21,7 @@ function r1eff{M,N}(S::Array{Float64,M}, R10::Array{Float64,N}, TR::Float64, fli
   nt = dims[1]
   n = prod(dims[2:end])
   S = reshape(S, (nt, n))
-  S0 = mean(S[1:2,:],1)
+  S0 = mean(S[1:9,:],1)
   A = copy(S)
   R1 = similar(S)
   for k = 1:n
